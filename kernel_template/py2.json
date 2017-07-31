@@ -1,0 +1,13 @@
+{
+    "display_name": "%%KERNEL_NAME%%",
+    "language": "python",
+    "argv": [
+        "bash",
+        "-c",
+        "source \"/opt/conda/envs/python2/bin/activate\" \"/opt/conda/envs/python2\" && exec /opt/conda/envs/python2/bin/python -m ipykernel_launcher -f {connection_file}"
+    ],
+    "env": {
+        "SPARK_HOME": "%%SPARK_HOME%%",
+        "PYTHONPATH": "%%SPARK_PYPATH%%"
+    }
+}

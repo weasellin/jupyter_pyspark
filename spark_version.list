@@ -1,0 +1,4 @@
+# SPARK_VERSION, PYTHON_VERSION, KERNEL_TEMPLATE
+# spark-1.5.2-bin-hadoop2.6, python2, py2.json
+spark-2.0.2-bin-hadoop2.6, python2, py2.json
+spark-2.2.0-bin-hadoop2.6, python3, py3.json
