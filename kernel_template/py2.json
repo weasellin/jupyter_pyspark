@@ -4,10 +4,11 @@
     "argv": [
         "bash",
         "-c",
-        "source \"/opt/conda/envs/python2/bin/activate\" \"/opt/conda/envs/python2\" && exec /opt/conda/envs/python2/bin/python -m ipykernel_launcher -f {connection_file}"
+        "source \"/opt/conda/envs/python2/bin/activate\" \"/opt/conda/envs/python2\" && exec /opt/conda/envs/python2/bin/python -m ipykernel_launcher --profile=\"%%PROFILE_NAME%%\" -f {connection_file}"
     ],
     "env": {
         "SPARK_HOME": "%%SPARK_HOME%%",
-        "PYTHONPATH": "%%SPARK_PYPATH%%"
+        "PYTHONPATH": "%%SPARK_PYPATH%%",
+        "PYSPARK_PYTHON": "/opt/conda/envs/python2/bin/python"
     }
 }

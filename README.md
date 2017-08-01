@@ -18,4 +18,5 @@ How to configurate pyspark kernels:
     * `SPARK_VERSION`: spark release pre-built version, please refer to [http://d3kbcqa49mib13.cloudfront.net/] for availabilities
     * `PYTHON_VERSION`: python version, build-in `python2` or `python3` in the based image `scipy-notebook`
     * `KERNEL_TEMPLATE`: template file for `kernel.json`, optionally to setup the kernel json template under `kernel_template`
+    * `SCRIPT_PROFILE`: script set for ipython profile startup, optionally to setup the startup script under `profile_script`
 * Rebuild image

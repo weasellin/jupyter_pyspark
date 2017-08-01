@@ -5,6 +5,7 @@
         "/opt/conda/bin/python",
         "-m",
         "ipykernel_launcher",
+        "--profile=\"%%PROFILE_NAME%%\"",
         "-f",
         "{connection_file}"
     ],

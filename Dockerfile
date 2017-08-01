@@ -12,9 +12,11 @@ RUN echo 'deb http://cdn-fastly.deb.debian.org/debian jessie-backports main' > /
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY install_spark_from_list.sh /tmp/install_spark_from_list.sh
-COPY spark_version.list /tmp/spark_version.list
+COPY install.sh /tmp/install.sh
+COPY kernel.list /tmp/kernel.list
 COPY kernel_template /tmp/kernel_template
-RUN cd /tmp && ./install_spark_from_list.sh
+COPY profile_script /tmp/profile_script
+RUN cd /tmp && ./install.sh
+RUN chown -R $NB_USER:users /home/$NB_USER/.ipython
 
 USER $NB_USER
